@@ -5,7 +5,7 @@
 
 A curated list of papers, benchmarks, tools, and runtime systems for **terminal agents**: AI agents that make progress through command-line environments by issuing shell commands, reading textual observations, mutating workspaces, running tests, and recovering from execution feedback.
 
-This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**. The current list is built from the survey bibliography, the coded corpus spreadsheet in `corpus_spreadsheet_preprint_remap_20260601.csv`, and the June 2026 survey revision.
+This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**.
 
 - [Read the survey PDF](terminal-agents-survey.pdf)
 - Survey authors: Xiaoyang Yuan, Haoxi Zeng, Wencheng Ye, Yi Bin, Wenqi Shao, Chen Qian, Wei Ye, Yujuan Ding, Jingkuan Song, and Heng Tao Shen.
