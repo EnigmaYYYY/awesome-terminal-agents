@@ -8,7 +8,6 @@ A curated list of papers, benchmarks, tools, and runtime systems for **terminal 
 This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**.
 
 - [Read the survey PDF](terminal-agents-survey.pdf)
-- Survey authors: Xiaoyang Yuan, Haoxi Zeng, Wencheng Ye, Yi Bin, Wenqi Shao, Chen Qian, Wei Ye, Yujuan Ding, Jingkuan Song, and Heng Tao Shen.
 - Scope: terminal-native agents, repository-grounded coding agents, executable benchmarks, CLI environments, harnesses, training pipelines, process evaluation, safety, and adjacent computer-use agents.
 - Status: v1 release candidate. The repository is currently maintained privately while public release materials are prepared. README entries are restricted to works cited in the current survey PDF and remain a curated subset rather than an exhaustive index.
 
