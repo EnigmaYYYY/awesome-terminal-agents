@@ -5,11 +5,12 @@
 
 A curated list of papers, benchmarks, tools, and runtime systems for **terminal agents**: AI agents that make progress through command-line environments by issuing shell commands, reading textual observations, mutating workspaces, running tests, and recovering from execution feedback.
 
-This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**. The current list is built from the survey bibliography and the coded corpus spreadsheet in `corpus_spreadsheet_preprint_remap_20260601.csv`.
+This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**. The current list is built from the survey bibliography, the coded corpus spreadsheet in `corpus_spreadsheet_preprint_remap_20260601.csv`, and the June 2026 survey revision.
 
 - [Read the survey PDF](terminal-agents-survey.pdf)
+- Survey authors: Xiaoyang Yuan, Haoxi Zeng, Wencheng Ye, Yi Bin, Wenqi Shao, Chen Qian, Wei Ye, Yujuan Ding, Jingkuan Song, and Heng Tao Shen.
 - Scope: terminal-native agents, repository-grounded coding agents, executable benchmarks, CLI environments, harnesses, training pipelines, process evaluation, safety, and adjacent computer-use agents.
-- Status: v1 public release. This is a curated corpus, not an exhaustive index of every cited work.
+- Status: v1 release candidate. The repository is currently maintained privately while public release materials are prepared. README entries are restricted to works cited in the current survey PDF and remain a curated subset rather than an exhaustive index.
 
 ## Contents
 
@@ -23,6 +24,7 @@ This repository accompanies the survey **Terminal Agents: A Survey of AI Agents 
 - [Safety, Security, and Governance](#safety-security-and-governance)
 - [Adjacent Computer-Use and Tool-Use Agents](#adjacent-computer-use-and-tool-use-agents)
 - [Foundational Work](#foundational-work)
+- [Survey Positioning](#survey-positioning)
 - [Corpus Notes](#corpus-notes)
 - [Contributing](#contributing)
 - [Citation](#citation)
@@ -182,12 +184,8 @@ Work on privileged execution, risky code, sandbox escape, harmful behavior, secu
 | SecureVibeBench: Benchmarking Secure Vibe Coding of AI Agents via Reconstructing Vulnerability-Introducing Scenarios | 2026 | benchmark | [Paper](https://arxiv.org/abs/2509.22097) | Core-Hybrid-Terminal |
 | SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios | 2025 | benchmark | [Paper](https://arxiv.org/abs/2509.22097) | SWE-Executable-Adjacent |
 | CIBER: A Comprehensive Benchmark for Security Evaluation of Code Interpreter Agents | 2026 | safety | [Paper](https://arxiv.org/abs/2602.19547) | Adjacent-Comparator |
-| DoomArena: A Framework for Testing AI Agents against Evolving Security Threats | 2025 | benchmark | [Paper](https://arxiv.org/abs/2504.14064) | Adjacent-Comparator |
-| AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.02947) | Adjacent-Comparator |
 | LPS-Bench: Benchmarking Safety Awareness of Computer-Use Agents in Long-Horizon Planning under Benign and Adversarial Scenarios | 2026 | benchmark | [Paper](https://arxiv.org/abs/2602.03255) | Adjacent-Comparator |
 | Secure and Efficient Access Control for Computer-Use Agents via Context Space | 2025 | architecture | [Paper](https://arxiv.org/abs/2509.22256) | Background-Theory |
-| The Oversight Game: Learning to Cooperatively Balance an AI Agent's Safety and Autonomy | 2025 | background | [Paper](https://arxiv.org/abs/2510.26752) | Background-Theory |
-| When the Agent Is the Adversary: Architectural Requirements for Agentic AI Containment | 2026 | architecture / background | [Paper](https://arxiv.org/abs/2604.23425) | Background-Theory |
 
 ## Adjacent Computer-Use and Tool-Use Agents
 
@@ -218,6 +216,16 @@ Background work on tool use, reasoning, code models, and executable action parad
 | Program-Aided Language Models | 2023 | background | [Paper](https://arxiv.org/abs/2211.10435) | Background-Theory |
 | Competition-Level Code Generation with AlphaCode | 2022 | background | [Paper](https://www.science.org/doi/10.1126/science.abq1158) | Background-Theory |
 
+## Survey Positioning
+
+The survey treats the terminal as an execution substrate rather than merely a surface interface. A system is in scope when command execution drives task progress, textual feedback informs subsequent actions, and stateful environment interaction is central to the workload.
+
+The current synthesis emphasizes three claims:
+
+- Terminal-agent behavior should be analyzed through a substrate-centered command-observation loop.
+- Terminal competence is multi-dimensional: action formulation, feedback interpretation, runtime management, state and context tracking, progress verification, failure recovery, and side-effect control are separable capability dimensions.
+- Outer-loop design, including harnesses, context handling, observation shaping, permissions, and recovery policies, is a first-class variable that can materially change measured performance.
+
 ## Corpus Notes
 
 The survey corpus uses evidence-calibrated inclusion tiers rather than quality rankings.
@@ -231,7 +239,7 @@ The survey corpus uses evidence-calibrated inclusion tiers rather than quality r
 | Background-Theory | Conceptual or framing sources without direct terminal-agent evidence. |
 | Engineering-Practice-Tool | Deployment-facing product or project reference, not treated as controlled empirical evidence. |
 
-The current coded spreadsheet contains 199 bibliography entries, including 194 coded research entries and 5 engineering-practice tool references. In this README, entries are grouped by their primary role in the survey narrative, so a paper may reasonably fit more than one section.
+The latest survey PDF cites 192 bibliography entries, including 187 coded research entries and 5 engineering-practice tool references. In this README, entries are grouped by their primary role in the survey narrative, so a paper may reasonably fit more than one section.
 
 ## Contributing
 
@@ -257,9 +265,9 @@ If you use this list or the survey, please cite:
 ```bibtex
 @misc{yuan2026terminalagents,
   title        = {Terminal Agents: A Survey of AI Agents in Command-Line Environments},
-  author       = {Yuan, Xiaoyang and Zeng, Haoxi and Ye, Wencheng and Bin, Yi and Chan, Huifen and Palmer, Charles and Smith, John and Kumquat, Julius P.},
+  author       = {Yuan, Xiaoyang and Zeng, Haoxi and Ye, Wencheng and Bin, Yi and Shao, Wenqi and Qian, Chen and Ye, Wei and Ding, Yujuan and Song, Jingkuan and Shen, Heng Tao},
   year         = {2026},
-  howpublished = {GitHub repository},
-  note         = {Survey and curated bibliography for terminal agents. Repository URL to be added upon public release.}
+  howpublished = {\url{https://github.com/EnigmaYYYY/awesome-terminal-agents}},
+  note         = {Survey and curated bibliography for terminal agents}
 }
 ```
