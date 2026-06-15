@@ -1,4 +1,4 @@
-# Awesome Terminal Agents
+# Awesome Terminal Agents (Command-Line Environment Agents)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Survey](https://img.shields.io/badge/Survey-PDF-blue)](terminal-agents-survey.pdf)
