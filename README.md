@@ -39,6 +39,7 @@ Deployment-facing tools that package terminal-mediated agency as a developer or 
 | Aider: AI Pair Programming in Your Terminal | 2025 | deployment tool | [GitHub](https://github.com/Aider-AI/aider) | Engineering-Practice-Tool |
 | Gemini CLI | 2025 | deployment tool | [GitHub](https://github.com/google-gemini/gemini-cli) | Engineering-Practice-Tool |
 | ShellGPT | 2026 | boundary comparator | [GitHub](https://github.com/TheR1D/shell_gpt) | Engineering-Practice-Tool |
+| Atomic Agent: Local-First CLI and TUI Coding Agent | 2026 | deployment tool | [GitHub](https://github.com/AtomicBot-ai/atomic-agent) / [Docs](https://atomicagent.io/docs) / [Website](https://atomicagent.io) | Engineering-Practice-Tool |
 
 ## Core Terminal-Agent Systems
 
