@@ -235,6 +235,7 @@ Boundary comparators for web, GUI, mobile, database, app-world, and general tool
 | AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents | 2024 | benchmark | [Paper](https://arxiv.org/abs/2407.18901) | Adjacent-Comparator |
 | OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments | 2024 | benchmark | [Paper](https://arxiv.org/abs/2404.07972) | Adjacent-Comparator |
 | WebArena: A Realistic Web Environment for Building Autonomous Agents | 2024 | benchmark | [Paper](https://arxiv.org/abs/2307.13854) | Adjacent-Comparator |
+| ClawBench: Can AI Agents Complete Everyday Online Tasks? | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.08523) / [Project](https://claw-bench.com/) / [GitHub](https://github.com/reacher-z/ClawBench) | Adjacent-Comparator |
 | AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents | 2025 | benchmark | [Paper](https://arxiv.org/abs/2405.14573) | Adjacent-Comparator |
 | ASTRA-Bench: Evaluating Tool-Use Agent Reasoning and Action Planning with Personal User Context | 2026 | benchmark | [Paper](https://arxiv.org/abs/2603.01357) | Adjacent-Comparator |
 | LifelongAgentBench: Evaluating LLM Agents as Lifelong Learners | 2025 | benchmark | [Paper](https://arxiv.org/abs/2505.11942) | Adjacent-Comparator |
