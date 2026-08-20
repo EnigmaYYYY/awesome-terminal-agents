@@ -1,15 +1,17 @@
 # Awesome Terminal Agents (Command-Line Environment Agents)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Survey](https://img.shields.io/badge/Survey-PDF-blue)](terminal-agents-survey.pdf)
+[![Survey](https://img.shields.io/badge/Survey-Preprint-blue)](https://www.preprints.org/manuscript/202606.1409)
 
 A curated list of papers, benchmarks, tools, and runtime systems for **terminal agents**: AI agents that make progress through command-line environments by issuing shell commands, reading textual observations, mutating workspaces, running tests, and recovering from execution feedback.
 
 This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**.
 
-- [Read the survey PDF](terminal-agents-survey.pdf)
+- [Read the public preprint](https://www.preprints.org/manuscript/202606.1409)
+- [Read the public v2 article (PDF)](paper/terminal-agents-survey-v2.pdf)
+- [Open the project page](https://EnigmaYYYY.github.io/awesome-terminal-agents/)
 - Scope: terminal-native agents, repository-grounded coding agents, executable benchmarks, CLI environments, harnesses, training pipelines, process evaluation, safety, and adjacent computer-use agents.
-- Status: v1 release candidate. The repository is currently maintained privately while public release materials are prepared. README entries are restricted to works cited in the current survey PDF and remain a curated subset rather than an exhaustive index.
+- Status: public v2. The public paper link remains the preprint, while the literature map is synchronized with the uploaded v2 article and the latest pulled TPAMI bibliography. Entries remain a curated subset rather than an exhaustive index; this update does not publish or replace the local PDF.
 
 ## Contents
 
@@ -57,8 +59,10 @@ Systems and studies where terminal-mediated execution is the dominant locus of p
 | Towards Agentic OS: An LLM Agent Framework for Linux Schedulers | 2025 | architecture | [Paper](https://arxiv.org/abs/2509.01245) | Core-Terminal-Primary |
 | Beyond State Machines: Executing Network Procedures with Agentic Tool-Calling Sequences | 2026 | architecture | [Paper](https://arxiv.org/abs/2605.02584) | Core-Terminal-Primary |
 | kRAIG: A Natural Language-Driven Agent for Automated DataOps Pipeline Generation | 2026 | architecture | [Paper](https://arxiv.org/abs/2603.20311) | Core-Terminal-Primary |
-| FinOps Agent: A Use-Case for IT Infrastructure and Cost Optimization | 2025 | architecture | [Paper](https://arxiv.org/abs/2510.25914) | Core-Terminal-Primary |
 | NetAgentBench: A State-Centric Benchmark for Evaluating Agentic Network Configuration | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.09678) | Core-Terminal-Primary |
+| RIVA: Leveraging LLM Agents for Reliable Configuration Drift Detection | 2026 | architecture | — | Core-Terminal-Primary |
+| Large Language Models for Agentic NetOps and AIOps: Architectures, Evaluation, and Safety | 2026 | survey / architecture | [Paper](https://arxiv.org/abs/2605.12729) | Core-Hybrid-Terminal |
+| How Helpful is LLM Assistance in Network Operations? A Case Study at a Large Demonstration Network | 2026 | empirical study | [Paper](https://arxiv.org/abs/2605.19627) | Core-Hybrid-Terminal |
 
 ## Terminal Benchmarks and Environments
 
@@ -82,6 +86,10 @@ Benchmarks and executable environments that directly measure command formulation
 | Evaluating LLM-Based 0-to-1 Software Generation in End-to-End CLI Tool Scenarios | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.06742) | Core-Terminal-Primary |
 | Do Agents Dream of Root Shells? Partial-Credit Evaluation of LLM Agents in Capture The Flag Challenges | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.19354) | Core-Terminal-Primary |
 | Quantifying Frontier LLM Capabilities for Container Sandbox Escape | 2026 | benchmark | [Paper](https://arxiv.org/abs/2603.02277) | Core-Terminal-Primary |
+| TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents | 2026 | benchmark | [Paper](https://arxiv.org/abs/2606.28480) | Core-Terminal-Primary |
+| Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading | 2026 | benchmark | [Paper](https://arxiv.org/abs/2607.08964) | Core-Terminal-Primary |
+| Matching Matters: A Fair Quality-Efficiency Benchmark for Command-Line Agents | 2026 | benchmark | [Paper](https://arxiv.org/abs/2606.21140) | Core-Terminal-Primary |
+| Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks | 2026 | benchmark | [Paper](https://arxiv.org/abs/2606.12344) | Core-Terminal-Primary |
 
 ## Repository and Software Engineering Benchmarks
 
@@ -106,6 +114,12 @@ Repository-centered benchmarks are not always terminal-native, but they are cent
 | ATime-Consistent Benchmark for Repository-Level Software Engineering Evaluation | 2026 | benchmark | [Paper](https://arxiv.org/abs/2603.26137) | Core-Hybrid-Terminal |
 | Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation | 2025 | benchmark | [Paper](https://arxiv.org/abs/2510.08996) | Core-Hybrid-Terminal |
 | SWE-Next: Scalable Real-World Software Engineering Tasks for Agents | 2026 | benchmark | [Paper](https://arxiv.org/abs/2603.20691) | Core-Terminal-Primary |
+| REAP: Automatic Curation of Coding Agent Benchmarks from Interactive Production Usage | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.01527) | Core-Hybrid-Terminal |
+| SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering? | 2026 | benchmark | [Paper](https://arxiv.org/abs/2603.15401) | Core-Hybrid-Terminal |
+| SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks | 2025 | benchmark / training | [Paper](https://arxiv.org/abs/2506.10954) | Core-Hybrid-Terminal |
+| AI IDEs or Autonomous Agents? Measuring the Impact of Coding Agents on Software Development | 2026 | empirical study | — | Core-Hybrid-Terminal |
+| Agentic Much? Adoption of Coding Agents on GitHub | 2026 | empirical study | — | SWE-Executable-Adjacent |
+| Security in the Age of AI Teammates: An Empirical Study of Agentic Pull Requests on GitHub | 2026 | empirical study | [Paper](https://arxiv.org/abs/2601.00477) | SWE-Executable-Adjacent |
 
 ## Harnesses, Runtimes, and Agent-Computer Interfaces
 
@@ -116,7 +130,6 @@ Outer-loop systems that shape action spaces, observation formats, context delive
 | AutoHarness: Improving LLM Agents by Automatically Synthesizing a Code Harness | 2026 | architecture | [Paper](https://arxiv.org/abs/2603.03329) | Core-Hybrid-Terminal |
 | Meta-Harness: End-to-End Optimization of Model Harnesses | 2026 | architecture | [Paper](https://arxiv.org/abs/2603.28052) | Core-Hybrid-Terminal |
 | Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses | 2026 | architecture | [Paper](https://arxiv.org/abs/2604.25850) | Core-Hybrid-Terminal |
-| Copilot Evaluation Harness: Evaluating LLM-Guided Software Programming | 2024 | architecture | [Paper](https://arxiv.org/abs/2402.14261) | Core-Hybrid-Terminal |
 | HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale | 2024 | architecture | [Paper](https://arxiv.org/abs/2409.16299) | Core-Hybrid-Terminal |
 | AgentStepper: Interactive Debugging of Software Development Agents | 2026 | architecture | [Paper](https://arxiv.org/abs/2602.06593) | Core-Hybrid-Terminal |
 | Debugging the Debuggers: Failure-Anchored Structured Recovery for Software Engineering Agents | 2026 | architecture | [Paper](https://arxiv.org/abs/2605.08717) | Core-Hybrid-Terminal |
@@ -126,6 +139,12 @@ Outer-loop systems that shape action spaces, observation formats, context delive
 | DockSmith: Scaling Reliable Coding Environments via an Agentic Docker Builder | 2026 | architecture | [Paper](https://arxiv.org/abs/2602.00592) | Core-Hybrid-Terminal |
 | Effective Strategies for Asynchronous Software Engineering Agents | 2026 | architecture | [Paper](https://arxiv.org/abs/2603.21489) | Core-Hybrid-Terminal |
 | Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering | 2026 | architecture | [Paper](https://arxiv.org/abs/2604.08224) | Core-Hybrid-Terminal |
+| The Scaffold Effect in Coding Agents: Harness Choice as a Hidden Variable in Coding-Agent Evaluation | 2026 | evaluation / architecture | [Paper](https://arxiv.org/abs/2607.22585) | Core-Hybrid-Terminal |
+| DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds | 2026 | architecture | [Paper](https://arxiv.org/abs/2608.06113) | Core-Terminal-Primary |
+| A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression | 2026 | architecture | [Paper](https://arxiv.org/abs/2604.19572) | Core-Terminal-Primary |
+| The Scaffolding Matters More Than the Interface: A Controlled Comparison of MCP and CLI Tool Use | 2026 | architecture / evaluation | [Paper](https://arxiv.org/abs/2608.08654) | Core-Hybrid-Terminal |
+| The Dual-State Architecture for Reliable LLM Agents | 2026 | architecture | [Paper](https://arxiv.org/abs/2512.20660) | Core-Hybrid-Terminal |
+| Git Context Controller: Manage the Context of LLM-Based Agents Like Git | 2025 | architecture | [Paper](https://arxiv.org/abs/2508.00031) | Core-Hybrid-Terminal |
 | AgentRM: An OS-Inspired Resource Manager for LLM Agent Systems | 2026 | architecture | [Paper](https://arxiv.org/abs/2603.13110) | Adjacent-Comparator |
 | AIOS: LLM Agent Operating System | 2024 | architecture | [Paper](https://arxiv.org/abs/2403.16971) | Adjacent-Comparator |
 
@@ -141,16 +160,25 @@ Work on executable environments, trajectory generation, reinforcement learning, 
 | On Data Engineering for Scaling LLM Terminal Capabilities | 2026 | training | [Paper](https://arxiv.org/abs/2602.21193) | Core-Terminal-Primary |
 | Training Software Engineering Agents and Verifiers with SWE-Gym | 2024 | training | [Paper](https://arxiv.org/abs/2412.21139) | Core-Terminal-Primary |
 | SWE-dev: Evaluating and Training Autonomous Feature-Driven Software Development | 2025 | training | [Paper](https://arxiv.org/abs/2505.16975) | Core-Terminal-Primary |
-| Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards | 2025 | training | [Paper](https://arxiv.org/abs/2506.11425) | Core-Terminal-Primary |
 | Training Long-Context, Multi-Turn Software Engineering Agents with Reinforcement Learning | 2025 | training | [Paper](https://arxiv.org/abs/2508.03501) | Core-Terminal-Primary |
 | SWE-Master: Unleashing the Potential of Software Engineering Agents via Post-Training | 2026 | training | [Paper](https://arxiv.org/abs/2602.03411) | Core-Terminal-Primary |
 | AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents | 2025 | training | [Paper](https://arxiv.org/abs/2507.14897) | Core-Hybrid-Terminal |
-| Hybrid-Gym: Training Coding Agents to Generalize Across Tasks | 2026 | training | [Paper](https://arxiv.org/abs/2602.16819) | Core-Hybrid-Terminal |
 | TRACE: Capability-Targeted Agentic Training | 2026 | training / acquisition | [Paper](https://arxiv.org/abs/2604.05336) | Core-Hybrid-Terminal |
 | AgentHER: Hindsight Experience Replay for LLM Agent Trajectory Relabeling | 2026 | training | [Paper](https://arxiv.org/abs/2603.21357) | Core-Terminal-Primary |
 | CLEANER: Self-Purified Trajectories Boost Agentic Reinforcement Learning | 2026 | training | [Paper](https://arxiv.org/abs/2601.15141) | Core-Hybrid-Terminal |
 | davinci-dev: Agent-Native Mid-Training for Software Engineering | 2026 | training | [Paper](https://arxiv.org/abs/2601.18418) | Core-Hybrid-Terminal |
 | R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents | 2025 | training | [Paper](https://arxiv.org/abs/2504.07164) | Core-Terminal-Primary |
+| CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents | 2026 | training / environment | [Paper](https://arxiv.org/abs/2606.22883) | Core-Terminal-Primary |
+| SETA: Scaling Environments for Terminal Agents | 2026 | training / environment | [Paper](https://arxiv.org/abs/2607.10891) | Core-Terminal-Primary |
+| Recursive Synthesis for Long-Horizon Terminal Tasks | 2026 | training / environment | [Paper](https://arxiv.org/abs/2608.05466) | Core-Terminal-Primary |
+| CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks | 2026 | training | [Paper](https://arxiv.org/abs/2608.06352) | Core-Terminal-Primary |
+| Tmax: A Simple Recipe for Terminal Agents | 2026 | training | [Paper](https://arxiv.org/abs/2606.23321) | Core-Terminal-Primary |
+| What Makes Interaction Trajectories Effective for Training Terminal Agents? | 2026 | training | [Paper](https://arxiv.org/abs/2606.03461) | Core-Terminal-Primary |
+| Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents | 2025 | training | [Paper](https://arxiv.org/abs/2509.23045) | Core-Hybrid-Terminal |
+| Memento: Fine-Tuning LLM Agents without Fine-Tuning LLMs | 2025 | training / adaptation | [Paper](https://arxiv.org/abs/2508.16153) | Core-Hybrid-Terminal |
+| ECHO: Terminal Agents Learn World Models for Free | 2026 | training / adaptation | [Paper](https://arxiv.org/abs/2605.24517) | Core-Terminal-Primary |
+| SWE-Smith: Scaling Data for Software Engineering Agents | 2026 | training | — | Core-Hybrid-Terminal |
+| Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly? | 2025 | training / adaptation | [Paper](https://arxiv.org/abs/2511.13646) | Core-Hybrid-Terminal |
 
 ## Process, Trace, and Long-Horizon Evaluation
 
@@ -160,16 +188,24 @@ Evaluation work that moves beyond binary success toward process defects, traject
 |---|---:|---|---|---|
 | ProcBench: Evaluating Process-Level Defects and Control Preservation in LLM Coding Agents | 2026 | benchmark | [Paper](https://arxiv.org/abs/2605.20251) | Core-Hybrid-Terminal |
 | OctoBench: Benchmarking Scaffold-Aware Instruction Following in Repository-Grounded Agentic Coding | 2026 | benchmark | [Paper](https://arxiv.org/abs/2601.10343) | Core-Hybrid-Terminal |
-| Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents | 2025 | benchmark | [Paper](https://arxiv.org/abs/2510.25694) | Core-Hybrid-Terminal |
+| Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents | 2026 | benchmark | [Paper](https://arxiv.org/abs/2510.25694) | Core-Hybrid-Terminal |
 | AgentEval: DAG-Structured Step-Level Evaluation for Agentic Workflows with Error Propagation Tracking | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.23581) | Core-Hybrid-Terminal |
 | AgentPulse: A Continuous Multi-Signal Framework for Evaluating AI Agents in Deployment | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.24038) | Core-Hybrid-Terminal |
 | Agent Psychometrics: Task-Level Performance Prediction in Agentic Coding Benchmarks | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.00594) | SWE-Executable-Adjacent |
 | Understanding Software Engineering Agents Through the Lens of Traceability: An Empirical Study | 2025 | empirical study | [Paper](https://arxiv.org/abs/2506.08311) | SWE-Executable-Adjacent |
 | Understanding Software Engineering Agents: A Study of Thought-Action-Result Trajectories | 2025 | empirical study | [Paper](https://arxiv.org/abs/2506.18824) | SWE-Executable-Adjacent |
 | Where Do AI Coding Agents Fail? An Empirical Study of Failed Agentic Pull Requests in GitHub | 2026 | empirical study | [Paper](https://arxiv.org/abs/2601.15195) | SWE-Executable-Adjacent |
-| AIDev: Studying AI Coding Agents on GitHub | 2026 | benchmark / empirical study | [Paper](https://arxiv.org/abs/2602.09185) | Core-Hybrid-Terminal |
 | Beyond Resolution Rates: Behavioral Drivers of Coding Agent Success and Failure | 2026 | benchmark | [Paper](https://arxiv.org/abs/2604.02547) | Core-Hybrid-Terminal |
 | Beyond Binary Correctness: Scaling Evaluation of Long-Horizon Agents on Subjective Enterprise Tasks | 2026 | benchmark | [Paper](https://arxiv.org/abs/2603.22744) | Core-Hybrid-Terminal |
+| Claw-Eval: Towards Trustworthy Evaluation of Autonomous Agents | 2026 | evaluation | [Paper](https://arxiv.org/abs/2604.06132) | Core-Hybrid-Terminal |
+| Failure as a Process: An Anatomy of CLI Coding Agent Trajectories | 2026 | empirical study | [Paper](https://arxiv.org/abs/2607.09510) | Core-Terminal-Primary |
+| AgentForesight: Online Auditing for Early Failure Prediction in Multi-Agent Systems | 2026 | process monitoring | [Paper](https://arxiv.org/abs/2605.08715) | Core-Hybrid-Terminal |
+| ACE-Bench: Agent Configurable Evaluation with Scalable Horizons and Controllable Difficulty under Lightweight Environments | 2026 | benchmark | — | Core-Hybrid-Terminal |
+| LiveSQLBench: A Dynamic and Contamination-Free Benchmark for Evaluating LLMs on Real-World Text-to-SQL Tasks | 2024 | benchmark | — | Adjacent-Comparator |
+| IDE-Bench: Evaluating Large Language Models as IDE Agents on Real-World Software Engineering Tasks | 2026 | benchmark | [Paper](https://arxiv.org/abs/2601.20886) | SWE-Executable-Adjacent |
+| ISO-Bench: Can Coding Agents Optimize Real-World Inference Workloads? | 2026 | benchmark | [Paper](https://arxiv.org/abs/2602.19594) | Core-Hybrid-Terminal |
+| Cross-Context Verification: Hierarchical Detection of Benchmark Contamination through Session-Isolated Analysis | 2026 | evaluation | [Paper](https://arxiv.org/abs/2603.21454) | Core-Hybrid-Terminal |
+| AgentClick: A Skill-Based Human-in-the-Loop Review Layer for Terminal AI Agents | 2026 | process / governance | — | Core-Terminal-Primary |
 
 ## Safety, Security, and Governance
 
@@ -180,11 +216,15 @@ Work on privileged execution, risky code, sandbox escape, harmful behavior, secu
 | ClawSafety: "Safe" LLMs, Unsafe Agents | 2026 | safety | [Paper](https://arxiv.org/abs/2604.01438) | Core-Hybrid-Terminal |
 | The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents | 2026 | safety | [Paper](https://arxiv.org/abs/2604.10577) | Core-Hybrid-Terminal |
 | CLAWSBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces | 2026 | safety | [Paper](https://arxiv.org/abs/2604.05172) | Core-Hybrid-Terminal |
-| SecureVibeBench: Benchmarking Secure Vibe Coding of AI Agents via Reconstructing Vulnerability-Introducing Scenarios | 2026 | benchmark | [Paper](https://arxiv.org/abs/2509.22097) | Core-Hybrid-Terminal |
-| SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios | 2025 | benchmark | [Paper](https://arxiv.org/abs/2509.22097) | SWE-Executable-Adjacent |
+| SecureVibeBench: Benchmarking Secure Vibe Coding of AI Agents via Reconstructing Vulnerability-Introducing Scenarios | 2026 | benchmark | — | Core-Hybrid-Terminal |
 | CIBER: A Comprehensive Benchmark for Security Evaluation of Code Interpreter Agents | 2026 | safety | [Paper](https://arxiv.org/abs/2602.19547) | Adjacent-Comparator |
 | LPS-Bench: Benchmarking Safety Awareness of Computer-Use Agents in Long-Horizon Planning under Benign and Adversarial Scenarios | 2026 | benchmark | [Paper](https://arxiv.org/abs/2602.03255) | Adjacent-Comparator |
 | Secure and Efficient Access Control for Computer-Use Agents via Context Space | 2025 | architecture | [Paper](https://arxiv.org/abs/2509.22256) | Background-Theory |
+| Coding Agents Are Guessing: Measuring Action-Boundary Violations in Underspecified DevOps Instructions | 2026 | safety / governance | [Paper](https://arxiv.org/abs/2607.02294) | Core-Hybrid-Terminal |
+| Permission Denied: Policy-Graded Evaluation of Coding Agents in Hardened Environments | 2026 | safety / governance | [Paper](https://arxiv.org/abs/2608.02670) | Core-Hybrid-Terminal |
+| ANCHOR: Automated Alignment Auditing for CLI Agents on Real-World Harm | 2026 | safety / governance | [Paper](https://arxiv.org/abs/2607.10455) | Core-Terminal-Primary |
+| AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents | 2025 | safety | — | Adjacent-Comparator |
+| AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents | 2026 | safety | [Paper](https://arxiv.org/abs/2604.02947) | Adjacent-Comparator |
 
 ## Adjacent Computer-Use and Tool-Use Agents
 
@@ -201,6 +241,11 @@ Boundary comparators for web, GUI, mobile, database, app-world, and general tool
 | ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities | 2025 | architecture / benchmark | [Paper](https://arxiv.org/abs/2408.04682) | Core-Hybrid-Terminal |
 | CodeAct: Executable Code Actions Elicit Better LLM Agents | 2024 | architecture / training | [Paper](https://arxiv.org/abs/2402.01030) | SWE-Executable-Adjacent |
 | Agentless: Demystifying LLM-Based Software Engineering Agents | 2024 | baseline | [Paper](https://arxiv.org/abs/2407.01489) | Adjacent-Comparator |
+| AgentBench: Evaluating LLMs as Agents | 2024 | benchmark | — | Adjacent-Comparator |
+| MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering | 2025 | benchmark | — | Adjacent-Comparator |
+| DAComp: Benchmarking Data Agents across the Full Data Intelligence Lifecycle | 2025 | benchmark | — | Adjacent-Comparator |
+| ML-Dev-Bench: Comparative Analysis of AI Agents on ML Development Workflows | 2025 | benchmark | [Paper](https://arxiv.org/abs/2502.00964) | Adjacent-Comparator |
+| DSAgentBench: Can Agents Automate End-to-End Data-Science Workflows in Real Computer Environments? | 2026 | benchmark | [Paper](https://arxiv.org/abs/2608.10366) | Adjacent-Comparator |
 
 ## Foundational Work
 
@@ -211,9 +256,6 @@ Background work on tool use, reasoning, code models, and executable action parad
 | ReAct: Synergizing Reasoning and Acting in Language Models | 2022 | definition | [Paper](https://arxiv.org/abs/2210.03629) | Background-Theory |
 | Toolformer: Language Models Can Teach Themselves to Use Tools | 2023 | definition | [Paper](https://arxiv.org/abs/2302.04761) | Background-Theory |
 | TALM: Tool Augmented Language Models | 2022 | definition | [Paper](https://arxiv.org/abs/2205.12255) | Background-Theory |
-| Evaluating Large Language Models Trained on Code | 2021 | background | [Paper](https://arxiv.org/abs/2107.03374) | Background-Theory |
-| Program-Aided Language Models | 2023 | background | [Paper](https://arxiv.org/abs/2211.10435) | Background-Theory |
-| Competition-Level Code Generation with AlphaCode | 2022 | background | [Paper](https://www.science.org/doi/10.1126/science.abq1158) | Background-Theory |
 
 ## Survey Positioning
 
@@ -238,7 +280,7 @@ The survey corpus uses evidence-calibrated inclusion tiers rather than quality r
 | Background-Theory | Conceptual or framing sources without direct terminal-agent evidence. |
 | Engineering-Practice-Tool | Deployment-facing product or project reference, not treated as controlled empirical evidence. |
 
-The latest survey PDF cites 192 bibliography entries, including 187 coded research entries and 5 engineering-practice tool references. In this README, entries are grouped by their primary role in the survey narrative, so a paper may reasonably fit more than one section.
+The latest public v2 article cites 191 bibliography entries, including 186 coded research entries and 5 engineering-practice tool references. The previous GPT/ChatGPT citation is not part of the v2 bibliography. In this README, entries are grouped by their primary role in the survey narrative, so a paper may reasonably fit more than one section.
 
 ## Contributing
 
@@ -262,11 +304,10 @@ Recommended entry format:
 If you use this list or the survey, please cite:
 
 ```bibtex
-@misc{yuan2026terminalagents,
-  title        = {Terminal Agents: A Survey of AI Agents in Command-Line Environments},
-  author       = {Yuan, Xiaoyang and Zeng, Haoxi and Ye, Wencheng and Bin, Yi and Shao, Wenqi and Qian, Chen and Ye, Wei and Ding, Yujuan and Song, Jingkuan and Shen, Heng Tao},
-  year         = {2026},
-  howpublished = {\url{https://github.com/EnigmaYYYY/awesome-terminal-agents}},
-  note         = {Survey and curated bibliography for terminal agents}
+@article{yuan2026terminal,
+  title={Terminal Agents: A Survey of AI Agents in Command-Line Environments},
+  author={Yuan, Xiaoyang and Zeng, Haoxi and Ye, Wencheng and Bin, Yi and Shao, Wenqi and Qian, Chen and Ye, Wei and Ding, Yujuan and Wang, Zheng and Zeng, Pengpeng and others},
+  year={2026},
+  publisher={Preprints}
 }
 ```
