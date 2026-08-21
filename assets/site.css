@@ -66,8 +66,7 @@ button, input { font: inherit; }
 .author-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; max-width: 1000px; margin: 30px auto 0; font-size: 13.5px; font-weight: 650; line-height: 1.65; }
 .author-list span:not(:last-child)::after { content: "·"; margin-left: 14px; color: rgba(23,23,42,.28); }
 .author-list sup { margin-left: 2px; color: var(--violet-dark); font-size: 9px; }
-.correspondence { margin: 8px 0 0; color: #8a8998; font-size: 12px; }
-.correspondence a { border-bottom: 1px solid rgba(23,23,42,.18); }
+.author-note { margin: 8px 0 0; color: #8a8998; font-size: 12px; }
 .affiliations { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; max-width: 1080px; margin: 18px auto 0; }
 .affiliations span { padding: 8px 11px; color: #626173; background: rgba(255,253,248,.88); border: 1px solid rgba(23,23,42,.13); border-radius: 10px; box-shadow: 0 4px 14px rgba(33,28,74,.04); font: 500 11px/1.2 var(--mono); }
 .affiliations sup { margin-right: 5px; color: var(--violet-dark); font-weight: 700; }
