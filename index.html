@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f3ec" />
+    <meta name="description" content="Terminal Agents: A Survey of AI Agents in Command-Line Environments. Public preprint and companion repository." />
+    <meta name="keywords" content="terminal agents, command-line agents, LLM agents, agent systems, agent evaluation, survey" />
+    <meta property="og:title" content="Terminal Agents: A Survey" />
+    <meta property="og:description" content="A substrate-centered survey of command execution, textual feedback, stateful environments, competence acquisition, and process-aware evaluation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://EnigmaYYYY.github.io/awesome-terminal-agents/" />
+    <meta property="og:image" content="https://EnigmaYYYY.github.io/awesome-terminal-agents/assets/figures/terminal-agent-definition.png" />
+    <title>Terminal Agents | A Survey of AI Agents in Command-Line Environments</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="shell nav-inner">
+        <a class="nav-brand" href="#top" aria-label="Terminal Agents survey home">
+          <img src="assets/terminal-agents-logo.svg" alt="Terminal Agents" />
+        </a>
+        <div class="nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#taxonomy">Taxonomy</a>
+          <a href="#evaluation">Evaluation</a>
+          <a href="#outlook">Outlook</a>
+          <a class="nav-cta" href="#cite">Cite</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <header class="hero" id="top">
+        <div class="hero-glow hero-glow-violet" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-teal" aria-hidden="true"></div>
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <div class="eyebrow"><span aria-hidden="true"></span>Survey · 2026 · Living reading list</div>
+            <h1><strong>Terminal Agents</strong>: A Survey of AI Agents in Command-Line Environments</h1>
+            <p class="hero-subtitle">A unified execution-substrate view of how AI agents formulate commands, interpret textual feedback, manage mutable environments, verify progress, recover from failure, and control side effects.</p>
+
+            <div class="author-list" aria-label="Paper authors">
+              <span>Xiaoyang Yuan<sup>1,2</sup></span>
+              <span>Haoxi Zeng<sup>1</sup></span>
+              <span>Wencheng Ye<sup>1</sup></span>
+              <span>Yi Bin<sup>1</sup></span>
+              <span>Wenqi Shao<sup>2</sup></span>
+              <span>Chen Qian<sup>3</sup></span>
+              <span>Wei Ye<sup>1</sup></span>
+              <span>Yujuan Ding<sup>4</sup></span>
+              <span>Zheng Wang<sup>1</sup></span>
+              <span>Pengpeng Zeng<sup>1</sup></span>
+              <span>Jingkuan Song<sup>1</sup></span>
+              <span>Heng Tao Shen<sup>1*</sup></span>
+            </div>
+            <p class="correspondence">* Corresponding author · <a href="mailto:shenhengtao@hotmail.com">shenhengtao@hotmail.com</a></p>
+
+            <div class="affiliations" aria-label="Author affiliations">
+              <span><sup>1</sup>Tongji University</span>
+              <span><sup>2</sup>Shanghai Innovation Institute</span>
+              <span><sup>3</sup>Shanghai Jiao Tong University</span>
+              <span><sup>4</sup>The Hong Kong Polytechnic University</span>
+            </div>
+
+            <div class="hero-actions">
+              <div class="hero-button-row" aria-label="Survey resources">
+                <a class="button button-primary" href="https://www.preprints.org/manuscript/202606.1409" target="_blank" rel="noreferrer">
+                  <span class="button-icon preprint-icon" aria-hidden="true">P</span>Preprints
+                </a>
+                <a class="button button-secondary" href="https://github.com/EnigmaYYYY/awesome-terminal-agents" target="_blank" rel="noreferrer">
+                  <svg class="button-icon github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17 5.1 18 5.4 18 5.4c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v2.6c0 .4.2.7.8.6A11.4 11.4 0 0 0 12 .8Z"/></svg>
+                  Awesome
+                </a>
+              </div>
+              <a class="explore-link" href="#overview">Explore the framework <span aria-hidden="true">↓</span></a>
+            </div>
+
+            <div class="institution-logos" aria-label="Affiliated institutions">
+              <a class="institution-card institution-tongji" href="https://www.tongji.edu.cn/" target="_blank" rel="noreferrer" aria-label="Tongji University">
+                <img src="assets/institutions/tongji.png" alt="Tongji University logo" />
+              </a>
+              <a class="institution-card institution-sii" href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer" aria-label="Shanghai Innovation Institute">
+                <img src="assets/institutions/shanghai-innovation.svg" alt="Shanghai Innovation Institute logo" />
+              </a>
+              <a class="institution-card institution-sjtu" href="https://www.sjtu.edu.cn/" target="_blank" rel="noreferrer" aria-label="Shanghai Jiao Tong University">
+                <img src="assets/institutions/sjtu.svg" alt="Shanghai Jiao Tong University logo" />
+              </a>
+              <a class="institution-card institution-polyu" href="https://www.polyu.edu.hk/" target="_blank" rel="noreferrer" aria-label="The Hong Kong Polytechnic University">
+                <img src="assets/institutions/polyu.png" alt="The Hong Kong Polytechnic University logo" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section overview-section" id="overview">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div>
+              <span class="section-index">01 / Overview</span>
+              <h2>Terminal-Mediated Action–Observation Loop</h2>
+            </div>
+            <p>The terminal is an execution substrate rather than merely a visible interface. Commands mutate persistent state, observations expose inspectable evidence, and later decisions depend on the resulting workspace.</p>
+          </div>
+          <figure class="paper-figure">
+            <img src="assets/figures/terminal-agent-definition.png" alt="Terminal-agent scope diagram showing the agent controller, terminal substrate, mutable environment state, and scope boundaries" />
+            <figcaption><span>FIG. 01</span>Operational scope of terminal agents: the dominant progress-bearing loop is mediated by command execution, textual feedback, and stateful environment interaction.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section progression-section" id="architecture">
+        <div class="shell">
+          <div class="progressive-heading">
+            <span class="section-index">Progressive system design</span>
+            <p>Terminal-mediated agency emerged as interfaces, mutable workspaces, runtime control, recovery, governance, and harness context became explicit design surfaces.</p>
+          </div>
+          <div class="progression-grid">
+            <figure class="paper-figure compact-figure">
+              <img src="assets/figures/technical_evolution.png" alt="Technical evolution from tool-augmented prompting to runtime and harness optimization" />
+              <figcaption><span>FIG. 02</span>Four shifts toward increasingly explicit terminal-agent architecture.</figcaption>
+            </figure>
+            <figure class="paper-figure compact-figure">
+              <img src="assets/figures/layered_loop_architecture.png" alt="Layered terminal-agent architecture around the action-observation loop" />
+              <figcaption><span>FIG. 03</span>Interface, runtime, control, and harness layers distribute responsibility around the loop.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section taxonomy-section" id="taxonomy">
+        <div class="shell">
+          <div class="section-heading taxonomy-heading">
+            <div>
+              <span class="section-index">02 / Taxonomy</span>
+              <h2>Seven Dimensions of Terminal Competence</h2>
+            </div>
+            <p>The profile organizes recurring responsibilities by the object being controlled, the evidence required for the next decision, and the response needed when execution diverges from the task.</p>
+          </div>
+
+          <div class="family-tabs" aria-label="Terminal competence dimensions">
+            <article class="family-tab is-active"><span>01</span><small>FORMULATE</small><h3>Command &amp; Action</h3><p>Translate goals, constraints, and state into executable operations.</p></article>
+            <article class="family-tab"><span>02</span><small>INTERPRET</small><h3>Feedback &amp; Artifacts</h3><p>Extract evidence from output, logs, diffs, traces, and files.</p></article>
+            <article class="family-tab"><span>03</span><small>MANAGE</small><h3>Runtime &amp; Environment</h3><p>Prepare dependencies, services, processes, and execution constraints.</p></article>
+            <article class="family-tab"><span>04</span><small>TRACK</small><h3>State, Task &amp; Context</h3><p>Maintain workspace state, history, facts, and unresolved goals.</p></article>
+            <article class="family-tab"><span>05</span><small>VERIFY</small><h3>Progress Verification</h3><p>Check intermediate validity, artifact trustworthiness, and completion.</p></article>
+            <article class="family-tab"><span>06</span><small>RECOVER</small><h3>Recovery &amp; Adaptation</h3><p>Diagnose failure, revise hypotheses, replan, and retry from evidence.</p></article>
+            <article class="family-tab"><span>07</span><small>GOVERN</small><h3>Side-Effect Control</h3><p>Respect permissions, sandboxes, approvals, credentials, and limits.</p></article>
+          </div>
+
+          <div class="family-panel">
+            <div class="family-panel-copy">
+              <span class="family-number">07</span>
+              <div class="family-label">INTERDEPENDENT / SYSTEM-LEVEL</div>
+              <h3>Competence lives across the complete system.</h3>
+              <p>Model, interface, harness, runtime, and environment jointly shape observed behavior. Recovery depends on feedback interpretation, state tracking, and verification; long-horizon persistence combines several dimensions at once.</p>
+              <div class="method-chips"><span>Executable traces</span><span>Runtime adaptation</span><span>Governance</span></div>
+            </div>
+            <figure class="panel-figure">
+              <img src="assets/figures/competence_acquisition_ecosystem.png" alt="Terminal competence acquisition ecosystem and seven-dimensional competence profile" />
+              <figcaption>Environment-grounded data, learning signals, runtime mechanisms, and governance jointly shape terminal competence.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section evaluation-section" id="evaluation">
+        <div class="shell">
+          <div class="section-heading split-heading light-heading">
+            <div>
+              <span class="section-index">03 / Evaluation</span>
+              <h2>Desired behavior needs visible evidence.</h2>
+            </div>
+            <p>Outcome scores remain essential, but process, environment, trace, and governance evidence determine what can be concluded about how an agent reached the result.</p>
+          </div>
+
+          <div class="evidence-spectrum" aria-label="Evaluation evidence layers">
+            <article><span>01</span><h3>Outcome</h3><p>Did the task complete under the benchmark-native evaluator?</p><i style="--fill: 100%"></i></article>
+            <article><span>02</span><h3>Process</h3><p>How did the agent formulate actions, use feedback, and recover?</p><i style="--fill: 78%"></i></article>
+            <article><span>03</span><h3>Environment</h3><p>Was runtime setup, persistence, and state validity established?</p><i style="--fill: 60%"></i></article>
+            <article><span>04</span><h3>Trace</h3><p>Can commands, observations, state changes, and checks be inspected?</p><i style="--fill: 53%"></i></article>
+            <article><span>05</span><h3>Governance</h3><p>Were permissions, containment, reversibility, and side effects visible?</p><i style="--fill: 36%"></i></article>
+          </div>
+
+          <div class="metric-grid">
+            <article><h3>Repository repair</h3><p>SWE-bench · Claw-SWE-Bench · SWE-PolyBench</p></article>
+            <article><h3>CLI / terminal-centered</h3><p>Terminal-Bench · TerminalWorld · LongCLI-Bench</p></article>
+            <article><h3>Setup &amp; process</h3><p>SetupBench · OctoBench · ProcBench</p></article>
+            <article><h3>Governance &amp; safety</h3><p>BashArena · ClawSafety · policy-focused protocols</p></article>
+          </div>
+          <div class="evaluation-note">
+            <div><b>Benchmark exposure</b><span>Different task families foreground different process demands.</span></div>
+            <div><b>System attribution</b><span>Measured behavior reflects model, interface, harness, runtime, and environment together.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section outlook-section" id="outlook">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div>
+              <span class="section-index">04 / Future directions</span>
+              <h2>Toward dependable terminal-mediated agency</h2>
+            </div>
+            <p>Four connected priorities follow from the survey's architecture, acquisition, and evaluation evidence.</p>
+          </div>
+          <div class="outlook-grid">
+            <article class="outlook-card outlook-violet"><span>01</span><h3>Cross-domain competence</h3><p>Separate reusable substrate-level capabilities from workflow-specific heuristics across operations, data engineering, science, cloud management, and security.</p><div><b>Transfer</b><b>Domain breadth</b></div></article>
+            <article class="outlook-card outlook-teal"><span>02</span><h3>Fresh, replayable evaluation</h3><p>Combine live or regenerated tasks with traces that preserve commands, observations, state changes, interventions, and verifier calls.</p><div><b>Freshness</b><b>Replayability</b></div></article>
+            <article class="outlook-card outlook-coral"><span>03</span><h3>Runtime governability</h3><p>Assess task success together with authorization, containment, reversibility, destructive-action prevention, and external side-effect control.</p><div><b>Safety</b><b>Control</b></div></article>
+            <article class="outlook-card outlook-blue"><span>04</span><h3>Controlled attribution</h3><p>Vary model, interface, harness, or runtime while preserving task identity and execution conditions to isolate transferable gains.</p><div><b>Factorial design</b><b>Attribution</b></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section citation-section" id="cite">
+        <div class="shell citation-layout">
+          <div class="citation-copy">
+            <span class="section-index">05 / Citation</span>
+            <h2>Build on the survey.</h2>
+            <p>The public preprint provides the paper entry point. The companion repository maintains the curated reading list and project materials.</p>
+            <div class="citation-actions">
+              <a class="button button-primary" href="https://www.preprints.org/manuscript/202606.1409" target="_blank" rel="noreferrer">Read the preprint <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/EnigmaYYYY/awesome-terminal-agents" target="_blank" rel="noreferrer">Browse the repository <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="bib-card">
+            <div class="bib-card-head"><span>BIBTEX / 2026</span></div>
+            <pre><code>@article{yuan2026terminal,
+  title={Terminal Agents: A Survey of AI Agents in Command-Line Environments},
+  author={Yuan, Xiaoyang and Zeng, Haoxi and Ye, Wencheng and Bin, Yi and
+          Shao, Wenqi and Qian, Chen and Ye, Wei and Ding, Yujuan and
+          Wang, Zheng and Zeng, Pengpeng and others},
+  year={2026},
+  publisher={Preprints}
+}</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-inner">
+        <div class="footer-brand"><img src="assets/terminal-agents-logo.svg" alt="" /><p>Terminal Agents: A Survey of AI Agents in Command-Line Environments</p></div>
+        <div class="footer-links"><a href="https://www.preprints.org/manuscript/202606.1409">Preprints</a><a href="https://github.com/EnigmaYYYY/awesome-terminal-agents">GitHub</a><a href="mailto:shenhengtao@hotmail.com">Contact</a></div>
+        <p class="footer-note">Research site · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>
