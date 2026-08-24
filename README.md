@@ -1,17 +1,20 @@
 # Awesome Terminal Agents (Command-Line Environment Agents)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.20485-b31b1b.svg)](https://arxiv.org/abs/2608.20485)
 [![Survey](https://img.shields.io/badge/Survey-Preprint-blue)](https://www.preprints.org/manuscript/202606.1409)
 
 A curated list of papers, benchmarks, tools, and runtime systems for **terminal agents**: AI agents that make progress through command-line environments by issuing shell commands, reading textual observations, mutating workspaces, running tests, and recovering from execution feedback.
 
 This repository accompanies the survey **Terminal Agents: A Survey of AI Agents in Command-Line Environments**.
 
-- [Read the public preprint](https://www.preprints.org/manuscript/202606.1409)
+- [Read on arXiv](https://arxiv.org/abs/2608.20485)
+- [Download the arXiv PDF](https://arxiv.org/pdf/2608.20485)
+- [Read the Preprints mirror](https://www.preprints.org/manuscript/202606.1409)
 - [Read the public v2 article (PDF)](paper/terminal-agents-survey-v2.pdf)
 - [Open the project page](https://EnigmaYYYY.github.io/awesome-terminal-agents/)
 - Scope: terminal-native agents, repository-grounded coding agents, executable benchmarks, CLI environments, harnesses, training pipelines, process evaluation, safety, and adjacent computer-use agents.
-- Status: public v2. The public paper link remains the preprint, while the literature map is synchronized with the uploaded v2 article and the latest pulled TPAMI bibliography. Entries remain a curated subset rather than an exhaustive index; this update does not publish or replace the local PDF.
+- Status: arXiv v1 (`2608.20485`, `cs.AI`, `cs.SE`) and public v2. arXiv is the primary paper entry, with Preprints and the repository PDF retained as mirrors. README entries remain a curated subset rather than an exhaustive index.
 
 ## Contents
 
