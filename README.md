@@ -151,6 +151,7 @@ Outer-loop systems that shape action spaces, observation formats, context delive
 | Git Context Controller: Manage the Context of LLM-Based Agents Like Git | 2025 | architecture | [Paper](https://arxiv.org/abs/2508.00031) | Core-Hybrid-Terminal |
 | AgentRM: An OS-Inspired Resource Manager for LLM Agent Systems | 2026 | architecture | [Paper](https://arxiv.org/abs/2603.13110) | Adjacent-Comparator |
 | AIOS: LLM Agent Operating System | 2024 | architecture | [Paper](https://arxiv.org/abs/2403.16971) | Adjacent-Comparator |
+| SandBase Harness | 2026 | engineering-practice-tool | [GitHub](https://github.com/sandbaseai/sandbase-harness) / [MCP docs](https://github.com/sandbaseai/sandbase-harness/blob/main/docs/mcp-server.md) | Engineering-Practice-Tool |
 
 ## Training, Trajectories, and Competence Acquisition
 
